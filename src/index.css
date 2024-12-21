@@ -182,6 +182,13 @@ body {
   overflow: hidden;
 }
 
+.shopItem_button.disabled {
+  cursor: default;
+  pointer-events: none;
+  background-color: #eee;
+  opacity: 0.5;
+}
+
 .shopItem_button:hover {
   background-color: #f8d43f;
   box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.15);

@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Typography({ text, className }) {
+function Typography({ text, className, onClick }) {
   return (
-    <div className={className}>{text}</div>
+    <div className={className} onClick={onClick}>{text}</div>
   )
 }
 

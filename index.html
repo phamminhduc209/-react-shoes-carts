@@ -9,5 +9,21 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+
+    <script>
+      const products = [
+        { id: 1, price: 10 },
+        { id: 2, price: 5 },
+      ]
+
+      const idBE = 1;
+      const newProducts = JSON.parse(JSON.stringify(products))
+      newProducts[idBE].price = 5 + 10;
+
+      console.log('deep clone: ', {
+        products,
+        newProducts
+      })
+    </script>
   </body>
 </html>
