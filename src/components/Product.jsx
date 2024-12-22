@@ -5,8 +5,10 @@ import Typography from "./Typography";
 
 import { dataProducts } from '../mockData';
 import { fakeApi } from '../utils/fakeapi';
+import { useAppContext } from '../context/AppContext';
 
-function Product({ addToCart, carts }) {
+function Product() {
+  const { carts } = useAppContext();
   const [products, setProducts] = React.useState([]);
 
   React.useEffect(() => {
@@ -32,7 +34,6 @@ function Product({ addToCart, carts }) {
                 <ProductItem 
                   key={product.id} 
                   product={product} 
-                  addToCart={addToCart} 
                   isDisabled={isDisabled} 
                 />
               )

@@ -2,8 +2,10 @@ import React from 'react'
 
 import CartItem from './CartItem'
 import Image from './Image'
+import { useAppContext } from '../context/AppContext'
 
-function Cart({ carts, deleteCartItem, plusQuanlity, minusQuanlity }) {
+function Cart() {
+  const { carts } = useAppContext();
 
   const totalPrice = React.useMemo(() => {
     return carts.reduce((acc, curr) => {
@@ -32,9 +34,6 @@ function Cart({ carts, deleteCartItem, plusQuanlity, minusQuanlity }) {
             <CartItem 
               key={cart.id} 
               cart={cart} 
-              deleteCartItem={deleteCartItem} 
-              plusQuanlity={plusQuanlity}
-              minusQuanlity={minusQuanlity}
             />
           )
         })}

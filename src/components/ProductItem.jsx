@@ -2,8 +2,11 @@ import React from 'react'
 
 import Image from './Image';
 import Typography from './Typography';
+import { useAppContext } from '../context/AppContext';
 
-function ProductItem({ product, addToCart, isDisabled }) {
+function ProductItem({ product, isDisabled }) {
+  const { addToCart } = useAppContext();
+
   return (
     <div className="shopItem">
       <div

@@ -1,6 +1,9 @@
 import React from 'react'
+import { useAppContext } from '../context/AppContext'
 
-function CartItem({ cart, deleteCartItem, plusQuanlity, minusQuanlity }) {
+function CartItem({ cart }) {
+  const { deleteCartItem, plusQuanlity, minusQuanlity } = useAppContext();
+  
   return (
     <div className="cardItem">
       <div className="cardItem_left">
